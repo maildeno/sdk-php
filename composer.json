@@ -1,5 +1,5 @@
 {
-    "name": "maildeno/maildeno-php",
+    "name": "maildeno/maildeno",
     "description": "Official Maildeno PHP SDK — fetch, cache, and render email templates with the bundled native maildeno-engine executable. Zero-config: works out of the box.",
     "type": "library",
     "license": "MIT",
