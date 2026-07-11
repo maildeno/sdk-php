@@ -1,0 +1,25 @@
+{
+    "name": "maildeno/maildeno-php",
+    "description": "Official Maildeno PHP SDK — fetch, cache, and render email templates with the bundled native maildeno-engine executable. Zero-config: works out of the box.",
+    "type": "library",
+    "license": "MIT",
+    "homepage": "https://github.com/maildeno/sdk-php",
+    "keywords": ["maildeno", "email", "template", "renderer", "mjml", "react-email"],
+    "require": {
+        "php": ">=8.1",
+        "ext-curl": "*",
+        "ext-json": "*",
+        "symfony/process": "^6.4 || ^7.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Maildeno\\": "src/"
+        }
+    },
+    "scripts": {
+        "test": "php tests/run.php"
+    },
+    "config": {
+        "sort-packages": true
+    }
+}
