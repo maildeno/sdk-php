@@ -6,7 +6,7 @@ using a small native `maildeno-engine` executable bundled with the package
 for your platform. No engine setup — install it and render:
 
 ```bash
-composer require maildeno/maildeno-php
+composer require maildeno/maildeno
 ```
 
 ```php
@@ -29,7 +29,7 @@ regardless of where in your project you construct the client.
 - **PHP ≥ 8.1** with `ext-curl` and `ext-json`.
 - [`symfony/process`](https://packagist.org/packages/symfony/process) — a
   real dependency, installed automatically with `composer require
-  maildeno/maildeno-php`.
+  maildeno/maildeno`.
 - A `maildeno-engine` binary bundled for your platform. Windows, Linux
   (x64/arm64), and macOS (x64/arm64) are supported; see *Getting the native
   binaries* below if you need to add one for a platform that isn't bundled
@@ -47,7 +47,7 @@ build (`codesign -s -`) or it will not launch on Apple Silicon.
 ## Install
 
 ```bash
-composer require maildeno/maildeno-php
+composer require maildeno/maildeno
 ```
 
 No Composer? This package ships a PSR-4 autoloader for `Maildeno\*` classes
