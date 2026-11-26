@@ -5,6 +5,17 @@ This project adheres to [Semantic Versioning](https://semver.org/).
 
 ---
 
+## [2.2.3] - 2026-11-25
+
+### Added
+
+- **Full-width buttons.** A new **Full width** switch in a Button’s Layout section stretches the button across its column with a centered label, hides the **Alignment** control, and works as a Desktop/Mobile setting with an overridable mobile value and Reset link. It is saved as `props.fullWidth` and `props.mobile.fullWidth` (the key is omitted when unused), appears on the canvas, in Preview and in Saved Rows thumbnails, and exports as a block-level link in HTML, MJML and React Email. HTML and MJML wrap it in an Outlook-only one-cell table for padding, border and fill; gradient buttons fall back to their solid colour in Outlook. Mobile overrides use `display: block !important` or `display: inline-block !important`. Non-full-width button exports are unchanged.
+- **Import HTML reads full-width buttons.** A button whose link or painting cell fills its column imports as a full-width button, and one that fills only below the template breakpoint gets a `mobile.fullWidth` override. Fixed-width buttons and buttons centered in a wide table are not treated as full width. The report no longer says a phone-full-width button keeps its normal width, and exported full-width buttons round-trip.
+
+### Fixed
+
+- **Exports no longer split ordinary words.** The export body now uses `word-break: break-word` and `overflow-wrap: break-word` instead of `word-break: break-all`, so lines wrap at spaces and break a word only when it is wider than its whole line. Long URLs, tracking IDs and hashes still stay inside the email. HTML writes both declarations on the body, MJML in its `<mj-style>` base rule and React Email on the `<Body>` style.
+
 ## [2.2.2] - 2026-11-16
 
 ### Added
